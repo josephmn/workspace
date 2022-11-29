@@ -1,0 +1,50 @@
+-- verde: entorno de trabajo
+-- rojo: no se a guardado
+
+git config --global user.name "Joseph Magallanes"
+git config --global user.mail "josephcarlos.jcmn@gmail.com"
+git config --global core.editor "code --wait"
+git config --global -e
+git config --global core.autocrlf true  ... true para windows / input para mac
+
+
+1. ingresar a la ruta del proyecto
+2. git init   ... comando para iniciar proyecto(ruta) en git
+3. git status   ... comando para revisar status de los archivos
+4. git add "nombre de archivo.extension"   ... comando para agregar archivos a trabajar
+5. git commit   ... comando para subir repositorio git o cambios, presionar i para escribir
+6. git config --global user.email "you@example.com"   ... comando para agregar correo de desarrollador
+7. git config --global user.name "Your Name"   ... comando para agregar nombre de desarrollador
+8. git log   ... comando para revisar el log o cambios en mi archivo de los desarrolladores
+9. git checkout -- nombre.extension   ... comando para revertir los cambios actuales, muy import! guardar (commit antes) ya que borra lo hecho actualmente
+10. git diff nombre.ext   ... revisar la diferencia del codigo
+11. git commit + enter, luego presionar i, escribir el nombre que tendra el repositorio, luego Esc, luego ':' <- dos puntos, luego (wq) <- solo wq (w: write, q: quit)
+12. git commit -m "comentario para el codigo"   ... reemplaza al punto 11 mas corto sin entrar al editor de codigo .bin
+
+13. git branch   ... repositorio o foto instantanea del codigo
+14. git branch "nombre repositorio"   ... guarda con un nombre para usarlo
+15. git add .    ... comando con (.) <- punto para guardar todos los cambios de archivos o creacion de archivos nuevos
+
+... comando para subir al repositorio en github
+/*
+git remote add origin https://github.com/josephmn/gitcurso.git
+git push -u origin main
+*/
+
+16. git clone https://github.com/josephmn/recursoshumanos.git -b desarrollo   ... codigo link repositorio de internet
+17. git remote rm origin   ... remover origen remoto -> URL de gitlab o github
+
+git merge rama-heroes  -> fusiona dos ramas, tienes que estar en la rama master
+
+-- eliminar branch
+-> remoto:   git push origin --delete programador.app02
+-> local:    git branch -d programador.app02
+
+-- sincronizar branch del remoto
+-> local:    git pull origin "tu branch" <- sin comillas
+		 git checkout "tu branch" <- sin comillas
+		 git fetch
+
+/* revisar los log de git */
+git log --oneline
+git log --graph --oneline

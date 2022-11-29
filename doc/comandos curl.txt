@@ -1,0 +1,7 @@
+curl -i -X POST http://localhost:5000/post/1
+
+-- json
+curl -d "{}" -X POST http://localhost:5000/lele
+
+-- envio de parametros
+curl -d "llave1=dato1&llave2=dato2" -X POST http://localhost:5000/lele
